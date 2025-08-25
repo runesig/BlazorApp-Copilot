@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mzRlsMz355+VGTZoNk1zj2qt4wM2q1PFxZczwFTK03Q=",
+  "Hash": "6rdrccDNOxqFz2DgS5ZoG8ipA9swtbTltj5T01UdY5c=",
   "Source": "BlazorApp-Copilot",
   "BasePath": "_content/BlazorApp-Copilot",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BlazorApp-Copilot/wwwroot",
       "Source": "BlazorApp-Copilot",
-      "ContentRoot": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
+      "ContentRoot": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
       "BasePath": "_content/BlazorApp-Copilot",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/bundle/BlazorApp-Copilot.styles.css",
+      "Identity": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/bundle/BlazorApp-Copilot.styles.css",
       "SourceId": "BlazorApp-Copilot",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/BlazorApp-Copilot",
       "RelativePath": "BlazorApp-Copilot.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/bundle/BlazorApp-Copilot.styles.css"
+      "OriginalItemSpec": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/bundle/BlazorApp-Copilot.styles.css"
     },
     {
-      "Identity": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/projectbundle/BlazorApp-Copilot.bundle.scp.css",
+      "Identity": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/projectbundle/BlazorApp-Copilot.bundle.scp.css",
       "SourceId": "BlazorApp-Copilot",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/BlazorApp-Copilot",
       "RelativePath": "BlazorApp-Copilot.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/projectbundle/BlazorApp-Copilot.bundle.scp.css"
+      "OriginalItemSpec": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/obj/Debug/net8.0/scopedcss/projectbundle/BlazorApp-Copilot.bundle.scp.css"
     },
     {
-      "Identity": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/app.css",
+      "Identity": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/app.css",
       "SourceId": "BlazorApp-Copilot",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
+      "ContentRoot": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
       "BasePath": "_content/BlazorApp-Copilot",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/bootstrap/bootstrap.min.css",
+      "Identity": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "BlazorApp-Copilot",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
+      "ContentRoot": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
       "BasePath": "_content/BlazorApp-Copilot",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Identity": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "BlazorApp-Copilot",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
+      "ContentRoot": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
       "BasePath": "_content/BlazorApp-Copilot",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/favicon.png",
+      "Identity": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/favicon.png",
       "SourceId": "BlazorApp-Copilot",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
+      "ContentRoot": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/",
       "BasePath": "_content/BlazorApp-Copilot",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

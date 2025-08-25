@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorApp-Copilot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ef89cadc2ba6f9ea8de538f5c0296238fa6b57b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorApp-Copilot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorApp-Copilot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
