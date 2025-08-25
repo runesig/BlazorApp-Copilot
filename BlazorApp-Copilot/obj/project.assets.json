@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/runesig/.nuget/packages/": {}
+    "/home/runner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot.csproj",
+      "projectUniqueName": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot.csproj",
       "projectName": "BlazorApp-Copilot",
-      "projectPath": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot.csproj",
-      "packagesPath": "/Users/runesig/.nuget/packages/",
-      "outputPath": "/Users/runesig/Projects/dotNET/BlazorApp-Copilot/BlazorApp-Copilot/obj/",
+      "projectPath": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot.csproj",
+      "packagesPath": "/home/runner/.nuget/packages/",
+      "outputPath": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/runesig/.nuget/NuGet/NuGet.Config"
+        "/home/runner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -38,11 +38,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -67,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

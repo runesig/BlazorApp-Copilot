@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/obj/Release/net8.0/scopedcss/projectbundle/BlazorApp-Copilot.bundle.scp.css",
+      "PackagePath": "staticwebassets/BlazorApp-Copilot.bundle.scp.css"
+    },
+    {
+      "Id": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/home/runner/work/BlazorApp-Copilot/BlazorApp-Copilot/BlazorApp-Copilot/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.BlazorApp-Copilot.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.build.BlazorApp-Copilot.props",
+      "PackagePath": "build\\BlazorApp-Copilot.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlazorApp-Copilot.props",
+      "PackagePath": "buildMultiTargeting\\BlazorApp-Copilot.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.buildTransitive.BlazorApp-Copilot.props",
+      "PackagePath": "buildTransitive\\BlazorApp-Copilot.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
