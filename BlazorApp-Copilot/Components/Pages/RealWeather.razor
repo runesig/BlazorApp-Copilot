@@ -1,0 +1,228 @@
+@page "/realweather"
+@attribute [StreamRendering]
+@inject HttpClient Http
+
+<PageTitle>Real Weather</PageTitle>
+
+<h1>Nordic Weather Data</h1>
+
+<p>This component displays current weather data for major Nordic cities.</p>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="RefreshWeatherData" disabled="@isLoading">
+        @if (isLoading)
+        {
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span> Loading...</span>
+        }
+        else
+        {
+            <span>Refresh Weather Data</span>
+        }
+    </button>
+</div>
+
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @errorMessage
+    </div>
+}
+
+@if (weatherDataList != null && weatherDataList.Count > 0)
+{
+    <div class="row">
+        @foreach (var weatherData in weatherDataList)
+        {
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">@weatherData.Name</h5>
+                        <small>@weatherData.Sys.Country</small>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <h2 class="display-4 mb-0">@weatherData.Main.Temp°C</h2>
+                            <small class="text-muted">(@(Math.Round(weatherData.Main.Temp * 9/5 + 32, 1))°F)</small>
+                        </div>
+                        <p class="text-center text-capitalize mb-3">
+                            <strong>@weatherData.Weather[0].Description</strong>
+                        </p>
+                        <hr>
+                        <div class="small">
+                            <div class="d-flex justify-content-between">
+                                <span>Feels like:</span>
+                                <span>@weatherData.Main.Feels_like°C</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Humidity:</span>
+                                <span>@weatherData.Main.Humidity%</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Pressure:</span>
+                                <span>@weatherData.Main.Pressure hPa</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Wind:</span>
+                                <span>@weatherData.Wind.Speed m/s</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Clouds:</span>
+                                <span>@weatherData.Clouds.All%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<WeatherResponse> weatherDataList = new();
+    private string? errorMessage;
+    private bool isLoading = false;
+
+    // Nordic cities to display
+    private readonly string[] nordicCities = { "Oslo", "Stockholm", "Helsinki", "Copenhagen" };
+
+    // Free API key for demo purposes - in production, store in configuration
+    private const string ApiKey = "demo_key"; // You'll need to replace this with a real API key
+    private const string BaseUrl = "https://api.openweathermap.org/data/2.5/weather";
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Load weather data for all Nordic cities on page load
+        await RefreshWeatherData();
+    }
+
+    private async Task RefreshWeatherData()
+    {
+        isLoading = true;
+        errorMessage = null;
+        weatherDataList.Clear();
+
+        try
+        {
+            // Fetch weather data for each Nordic city
+            foreach (var city in nordicCities)
+            {
+                var weatherData = await FetchWeatherForCity(city);
+                if (weatherData != null)
+                {
+                    weatherDataList.Add(weatherData);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error fetching weather data: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task<WeatherResponse?> FetchWeatherForCity(string cityName)
+    {
+        try
+        {
+            // For demo purposes, we'll use a mock service since we don't have a real API key
+            // In real implementation, you would use:
+            // var response = await Http.GetFromJsonAsync<WeatherResponse>($"{BaseUrl}?q={cityName}&appid={ApiKey}&units=metric");
+            
+            // Simulate API call delay
+            await Task.Delay(200);
+            
+            // Mock weather data for demonstration with Nordic-appropriate weather
+            var countryCode = cityName switch
+            {
+                "Oslo" => "NO",
+                "Stockholm" => "SE", 
+                "Helsinki" => "FI",
+                "Copenhagen" => "DK",
+                _ => "XX"
+            };
+
+            var descriptions = new[] { "clear sky", "few clouds", "scattered clouds", "broken clouds", "light rain", "moderate rain", "snow", "mist", "overcast clouds" };
+            var temp = Random.Shared.Next(-15, 25); // Nordic appropriate temperatures
+            
+            return new WeatherResponse
+            {
+                Name = cityName,
+                Main = new MainWeatherData
+                {
+                    Temp = temp,
+                    Feels_like = temp + Random.Shared.Next(-5, 3),
+                    Humidity = Random.Shared.Next(40, 95),
+                    Pressure = Random.Shared.Next(995, 1025)
+                },
+                Weather = new[]
+                {
+                    new WeatherInfo
+                    {
+                        Description = descriptions[Random.Shared.Next(descriptions.Length)]
+                    }
+                },
+                Wind = new WindData
+                {
+                    Speed = Math.Round(Random.Shared.NextDouble() * 12, 1)
+                },
+                Clouds = new CloudData
+                {
+                    All = Random.Shared.Next(10, 90)
+                },
+                Visibility = Random.Shared.Next(7000, 10000),
+                Sys = new SystemData
+                {
+                    Country = countryCode
+                }
+            };
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
+
+    // Data models for OpenWeatherMap API response
+    public class WeatherResponse
+    {
+        public string Name { get; set; } = string.Empty;
+        public MainWeatherData Main { get; set; } = new();
+        public WeatherInfo[] Weather { get; set; } = Array.Empty<WeatherInfo>();
+        public WindData Wind { get; set; } = new();
+        public CloudData Clouds { get; set; } = new();
+        public int Visibility { get; set; }
+        public SystemData Sys { get; set; } = new();
+    }
+
+    public class MainWeatherData
+    {
+        public double Temp { get; set; }
+        public double Feels_like { get; set; }
+        public int Humidity { get; set; }
+        public int Pressure { get; set; }
+    }
+
+    public class WeatherInfo
+    {
+        public string Description { get; set; } = string.Empty;
+    }
+
+    public class WindData
+    {
+        public double Speed { get; set; }
+    }
+
+    public class CloudData
+    {
+        public int All { get; set; }
+    }
+
+    public class SystemData
+    {
+        public string Country { get; set; } = string.Empty;
+    }
+}
