@@ -186,43 +186,5 @@
         }
     }
 
-    // Data models for OpenWeatherMap API response
-    public class WeatherResponse
-    {
-        public string Name { get; set; } = string.Empty;
-        public MainWeatherData Main { get; set; } = new();
-        public WeatherInfo[] Weather { get; set; } = Array.Empty<WeatherInfo>();
-        public WindData Wind { get; set; } = new();
-        public CloudData Clouds { get; set; } = new();
-        public int Visibility { get; set; }
-        public SystemData Sys { get; set; } = new();
-    }
-
-    public class MainWeatherData
-    {
-        public double Temp { get; set; }
-        public double Feels_like { get; set; }
-        public int Humidity { get; set; }
-        public int Pressure { get; set; }
-    }
-
-    public class WeatherInfo
-    {
-        public string Description { get; set; } = string.Empty;
-    }
-
-    public class WindData
-    {
-        public double Speed { get; set; }
-    }
-
-    public class CloudData
-    {
-        public int All { get; set; }
-    }
-
-    public class SystemData
-    {
-        public string Country { get; set; } = string.Empty;
-    }
+    // Data models for OpenWeatherMap API response are now in the Models folder
 }
